@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('package.json')/*,
 
     qunit: {
       files: ['tests/qunit/index.html']
@@ -55,10 +55,10 @@ module.exports = function(grunt) {
     jshint: {
       all: ['<%= concat.dist.dest %>'],
       options: grunt.file.readJSON('./.jshintrc')
-    }
+    }*/
   });
 
-  grunt.registerTask('webdriver', 'Browser render tests', function(arg1) {
+  /*grunt.registerTask('webdriver', 'Browser render tests', function(arg1) {
     var selenium = require("./tests/selenium.js");
     var done = this.async();
 
@@ -74,11 +74,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-qunit');*/
 
   // Default task.
-  grunt.registerTask('build', ['concat', 'uglify']);
-  grunt.registerTask('default', ['concat', 'jshint', 'qunit', 'uglify']);
-  grunt.registerTask('travis', ['concat', 'jshint', 'qunit', 'uglify', 'webdriver']);
+  //grunt.registerTask('build', ['concat', 'uglify']);
+  //grunt.registerTask('default', ['concat', 'jshint', 'qunit', 'uglify']);
+  //grunt.registerTask('travis', ['concat', 'jshint', 'qunit', 'uglify', 'webdriver']);
 
 };
