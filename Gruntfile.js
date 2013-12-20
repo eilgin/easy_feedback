@@ -13,24 +13,12 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json')/*,
+    pkg: grunt.file.readJSON('package.json'),
 
-    qunit: {
-      files: ['tests/qunit/index.html']
-    },
     concat: {
       dist: {
         src: [
-          'src/Core.js',
-          'src/Font.js',
-          'src/Generate.js',
-          'src/Queue.js',
-          'src/Parse.js',
-          'src/Preload.js',
-          'src/Renderer.js',
-          'src/Support.js',
-          'src/Util.js',
-          'src/renderers/Canvas.js'
+          'src/easy_feedback.js'
         ],
         dest: 'build/<%= pkg.name %>.js'
       },
@@ -48,37 +36,18 @@ module.exports = function(grunt) {
         banner: meta.banner
       }
     },
-    watch: {
-      files: 'src/*',
-      tasks: ['build', 'jshint']
-    },
     jshint: {
       all: ['<%= concat.dist.dest %>'],
       options: grunt.file.readJSON('./.jshintrc')
-    }*/
-  });
-
-  /*grunt.registerTask('webdriver', 'Browser render tests', function(arg1) {
-    var selenium = require("./tests/selenium.js");
-    var done = this.async();
-
-    if (arguments.length) {
-      selenium[arg1].apply(null, arguments);
-    } else {
-      selenium.tests();
     }
   });
 
   // Load tasks
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');*/
 
   // Default task.
-  //grunt.registerTask('build', ['concat', 'uglify']);
-  //grunt.registerTask('default', ['concat', 'jshint', 'qunit', 'uglify']);
-  //grunt.registerTask('travis', ['concat', 'jshint', 'qunit', 'uglify', 'webdriver']);
-
+  grunt.registerTask('build', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'jshint', 'uglify']);
 };

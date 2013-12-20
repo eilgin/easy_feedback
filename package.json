@@ -2,10 +2,10 @@
   "title": "easy_feedback",
   "name": "easy_feedback",
   "description": "Let the user send visual feedback",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": {
     "name": "Thomas Jouannic",
-    "email": "ster.bzh@gmail.com",
+    "email": "eilginprod@gmail.com",
     "url": "http://www.thomas-jouannic.fr"
   },
   "engines": {
@@ -17,13 +17,10 @@
     "url": "git@github.com:eilgin/easy_feedback.git"
   },
   "bugs": {
-    "url": "https://github.com/niklasvh/html2canvas/issues"
+    "url": "https://github.com/eilgin/easy_feedback/issues"
   },
   "devDependencies": {
     "grunt": ">=0.4.0"
-  },
-  "scripts": {
-    "test": "grunt travis --verbose"
   },
   "homepage": "http://www.thomas-jouannic.fr/easy_feedback/",
   "licenses": [
