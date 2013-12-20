@@ -9,6 +9,4 @@
 * Grunt + Grunt CLI (v0.1.9)
 
 # Optional
-* Netbeans (7.4)
-* selenium
-* phantomJS
+* Netbeans (7.x)
