@@ -59,7 +59,7 @@ var panelHighlight = "Surligner";
 var panelNote = "Noter";
 var panelComment = "Ajouter vos commentaires ici...";
 
-var iTextContent = "Note";
+var iTextContent = "";
 
 
 var efb_style = document.createElement('style');
@@ -570,6 +570,8 @@ function md_Note(options) {
         fabric_canvas.add(text); 
         fabric_canvas.renderAll();
         fabric_canvas.setActiveObject(text);
+        // auto select the current text
+        text.enterEditing();
     }
 }
 function useNote(targetEl) {
